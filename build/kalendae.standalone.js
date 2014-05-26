@@ -29,7 +29,7 @@ var Kalendae = function (targetElement, options) {
 		calendars = self.calendars = [],
 		startDay = moment().day(opts.weekStart),
 		vsd,
-		columnHeaders = [],
+		columnHeaders = ['日','一','二','三','四','五','六'],
 		$cal,
 		$title,
 		$caption,
@@ -257,7 +257,7 @@ Kalendae.prototype = {
 		subscribe             :null,            /* object containing events to subscribe to */
 
 		columnHeaderFormat    :'dd',            /* number of characters to show in the column headers */
-		titleFormat           :'MMMM, YYYY',    /* format mask for month titles. See momentjs.com for rules */
+		titleFormat           :'YYYY年M月',    /* format mask for month titles. See momentjs.com for rules */
 		dayNumberFormat       :'D',             /* format mask for individual days */
 		dayAttributeFormat    :'YYYY-MM-DD',    /* format mask for the data-date attribute set on every span */
 		parseSplitDelimiter   : /,\s*|\s+-\s+/, /* regex to use for splitting multiple dates from a passed string */
